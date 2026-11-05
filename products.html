@@ -1,0 +1,140 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Products & Services - Template</title>
+  <style>
+    :root {
+      --primary-color: #ffd700;
+      --primary-text: #000000;
+      --dark-bg: #111111;
+      --light-bg: #f4f4f4;
+    }
+    * { box-sizing: border-box; margin: 0; padding: 0; font-family: 'Courier New', Courier, monospace; }
+    body { background-color: #ffffff; color: #333333; display: flex; flex-direction: column; min-height: 100vh; }
+    
+    .theme-bar { background: #222; color: #fff; padding: 10px 20px; font-family: sans-serif; font-size: 14px; display: flex; align-items: center; gap: 10px; }
+    .theme-bar select { padding: 4px 8px; font-size: 14px; border-radius: 4px; }
+
+    header { display: flex; justify-content: space-between; align-items: center; padding: 20px 40px; background: #fff; border-bottom: 2px solid var(--primary-color); }
+    .logo-container { background: var(--dark-bg); color: #fff; padding: 15px 25px; font-weight: bold; text-transform: uppercase; font-size: 20px; letter-spacing: 2px; text-align: center; border-left: 10px solid var(--primary-color); cursor: pointer; }
+    nav ul { display: flex; list-style: none; gap: 20px; }
+    nav a { text-decoration: none; color: #333; font-weight: bold; text-transform: uppercase; padding: 5px 10px; }
+    nav a:hover, nav a.active { background-color: var(--primary-color); color: var(--primary-text); }
+
+    .container { width: 90%; max-width: 1200px; margin: 20px auto; flex: 1; }
+    .page-title { text-align: center; font-size: 32px; font-weight: bold; margin-bottom: 30px; color: #222; border-bottom: 3px solid var(--primary-color); padding-bottom: 10px; }
+
+    .products-grid { display: grid; grid-template-columns: repeat(2, 1fr); gap: 30px; }
+    .product-card { border: 1px solid #ddd; background: var(--light-bg); display: flex; flex-direction: column; }
+    .image-placeholder { height: 200px; background: #e0e0e0; display: flex; align-items: center; justify-content: center; font-family: sans-serif; color: #666; border-bottom: 2px dashed #ccc; text-align: center; padding: 15px; }
+    .product-details { padding: 20px; flex: 1; display: flex; flex-direction: column; justify-content: space-between; }
+    .product-title { font-size: 20px; font-weight: bold; margin-bottom: 10px; color: #111; }
+    .btn { background: var(--primary-color); color: var(--primary-text); border: none; padding: 10px 15px; font-weight: bold; cursor: pointer; text-transform: uppercase; margin-top: 15px; align-self: flex-start; text-decoration: none; }
+
+    footer { background: var(--dark-bg); color: #fff; padding: 40px; margin-top: 50px; font-family: sans-serif; }
+    .footer-content { display: flex; justify-content: space-between; flex-wrap: wrap; gap: 20px; max-width: 1200px; margin: 0 auto; }
+    .footer-nav a { color: #fff; text-decoration: none; margin-right: 15px; text-transform: uppercase; font-size: 14px; }
+    .footer-nav a:hover { color: var(--primary-color); }
+  </style>
+</head>
+<body>
+
+  <div class="theme-bar">
+    <label for="themeSelect"><strong>Step 2: Choose Color Theme:</strong></label>
+    <select id="themeSelect" onchange="changeTheme(this.value)">
+      <option value="#ffd700">Yellow (Default)</option>
+      <option value="#007bff">Blue</option>
+      <option value="#28a745">Green</option>
+      <option value="#dc3545">Red</option>
+      <option value="#fd7e14">Orange</option>
+      <option value="#6f42c1">Purple</option>
+      <option value="#e83e8c">Pink</option>
+      <option value="#20c997">Teal</option>
+    </select>
+  </div>
+
+  <header>
+    <div class="logo-container">Click here to upload your own company logo</div>
+    <nav>
+      <ul>
+        <li><a href="index.html">HOME</a></li>
+        <li><a href="about.html">About Us</a></li>
+        <li><a href="products.html" class="active">Products & Services</a></li>
+        <li><a href="contact.html">Contact Us</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <div class="container">
+    <h1 class="page-title">Lorem Ipsum 123 Services</h1>
+
+    <div class="products-grid">
+      <!-- Item 1 -->
+      <div class="product-card">
+        <div class="image-placeholder">Click here to insert an image from the library</div>
+        <div class="product-details">
+          <div class="product-title">Lorem Ipsum 1 Package</div>
+          <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit 12345. Read more details below.</p>
+          <a href="#" class="btn">Read More 123</a>
+        </div>
+      </div>
+
+      <!-- Item 2 -->
+      <div class="product-card">
+        <div class="image-placeholder">Click here to insert an image from the library</div>
+        <div class="product-details">
+          <div class="product-title">Lorem Ipsum 2 Package</div>
+          <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit 12345. Read more details below.</p>
+          <a href="#" class="btn">Read More 123</a>
+        </div>
+      </div>
+
+      <!-- Item 3 -->
+      <div class="product-card">
+        <div class="image-placeholder">Click here to insert an image from the library</div>
+        <div class="product-details">
+          <div class="product-title">Lorem Ipsum 3 Package</div>
+          <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit 12345. Read more details below.</p>
+          <a href="#" class="btn">Read More 123</a>
+        </div>
+      </div>
+
+      <!-- Item 4 -->
+      <div class="product-card">
+        <div class="image-placeholder">Click here to insert an image from the library</div>
+        <div class="product-details">
+          <div class="product-title">Lorem Ipsum 4 Package</div>
+          <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit 12345. Read more details below.</p>
+          <a href="#" class="btn">Read More 123</a>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <footer>
+    <div class="footer-content">
+      <div>
+        <p>Call us: 123-456-7890</p>
+        <p>Find us: 1234 Lorem Ipsum Street, City 12345</p>
+      </div>
+      <div class="footer-nav">
+        <a href="index.html">HOME</a>
+        <a href="about.html">About Us</a>
+        <a href="products.html">Products & Services</a>
+        <a href="contact.html">Contact Us</a>
+      </div>
+      <div>
+        <p>&copy; 1234-5678 Template Option. All rights reserved.</p>
+      </div>
+    </div>
+  </footer>
+
+  <script>
+    function changeTheme(color) {
+      document.documentElement.style.setProperty('--primary-color', color);
+    }
+  </script>
+</body>
+</html>
