@@ -17,19 +17,17 @@
     /* Theme Selector Bar */
     .theme-bar { background: #222; color: #fff; padding: 10px 20px; font-family: sans-serif; font-size: 14px; display: flex; align-items: center; gap: 10px; }
     .theme-bar select { padding: 4px 8px; font-size: 14px; border-radius: 4px; }
-
     /* Header */
     header { display: flex; justify-content: space-between; align-items: center; padding: 20px 40px; background: #fff; border-bottom: 2px solid var(--primary-color); }
-    .logo-container { background: var(--dark-bg); color: #fff; padding: 15px 25px; font-weight: bold; text-transform: uppercase; font-size: 20px; letter-spacing: 2px; text-align: center; border-left: 10px solid var(--primary-color); cursor: pointer; }
+    .logo-container { width: 140px; height: 140px; background: var(--dark-bg); color: #fff; padding: 10px; font-weight: bold; text-transform: uppercase; font-size: 12px; letter-spacing: 1px; text-align: center; border-left: 10px solid var(--primary-color); cursor: pointer; display: flex; align-items: center; justify-content: center; overflow: hidden; flex-shrink: 0; }
+    .logo-container img { max-width: 100%; max-height: 100%; object-fit: contain; margin: auto; display: block; }
     nav ul { display: flex; list-style: none; gap: 20px; }
     nav a { text-decoration: none; color: #333; font-weight: bold; text-transform: uppercase; padding: 5px 10px; }
     nav a:hover, nav a.active { background-color: var(--primary-color); color: var(--primary-text); }
-
     /* Layout Content */
     .container { width: 90%; max-width: 1200px; margin: 20px auto; flex: 1; }
     .hero-image-placeholder { width: 100%; height: 400px; background: #e0e0e0; display: flex; align-items: center; justify-content: center; font-family: sans-serif; color: #666; border: 2px dashed #ccc; text-align: center; padding: 20px; position: relative; }
     .hero-banner { background: var(--primary-color); color: var(--primary-text); padding: 15px 25px; font-size: 24px; font-weight: bold; text-transform: uppercase; margin-top: -40px; position: relative; width: fit-content; margin-left: auto; margin-right: 5%; box-shadow: 4px 4px 0px #000; }
-
     .main-grid { display: grid; grid-template-columns: 1fr 2fr; gap: 30px; margin-top: 40px; }
     .card { background: var(--light-bg); padding: 20px; border-left: 5px solid var(--primary-color); }
     .badge { background: var(--primary-color); color: var(--primary-text); padding: 8px 15px; font-weight: bold; display: inline-block; margin-bottom: 15px; text-transform: uppercase; }
@@ -37,7 +35,6 @@
     
     .three-col { display: grid; grid-template-columns: repeat(3, 1fr); gap: 20px; text-align: center; }
     .circle-icon { width: 70px; height: 70px; background: #000; border-radius: 50%; margin: 0 auto 15px; border: 3px solid var(--primary-color); }
-
     /* Footer */
     footer { background: var(--dark-bg); color: #fff; padding: 40px; margin-top: 50px; font-family: sans-serif; }
     .footer-content { display: flex; justify-content: space-between; flex-wrap: wrap; gap: 20px; max-width: 1200px; margin: 0 auto; }
@@ -46,7 +43,6 @@
   </style>
 </head>
 <body>
-
   <!-- Step 2 Color Switcher -->
   <div class="theme-bar">
     <label for="themeSelect"><strong>Step 2: Choose Color Theme:</strong></label>
@@ -61,7 +57,6 @@
       <option value="#20c997">Teal</option>
     </select>
   </div>
-
   <!-- Header -->
   <header>
     <div class="logo-container">Click here to upload your own company logo</div>
@@ -74,14 +69,12 @@
       </ul>
     </nav>
   </header>
-
   <!-- Page Body -->
   <div class="container">
     <div class="hero-image-placeholder">
       Click here to insert an image from the library
     </div>
     <div class="hero-banner">Lorem Ipsum Dolor 12345</div>
-
     <div class="main-grid">
       <div class="card">
         <div class="badge">Lorem Ipsum 123</div>
@@ -90,7 +83,6 @@
         </p>
         <a href="#" class="btn">Details 123</a>
       </div>
-
       <div class="three-col">
         <div>
           <div class="circle-icon"></div>
@@ -110,7 +102,6 @@
       </div>
     </div>
   </div>
-
   <!-- Footer -->
   <footer>
     <div class="footer-content">
@@ -129,7 +120,6 @@
       </div>
     </div>
   </footer>
-
   <script>
     function changeTheme(color) {
       document.documentElement.style.setProperty('--primary-color', color);
