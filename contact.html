@@ -16,16 +16,14 @@
     
     .theme-bar { background: #222; color: #fff; padding: 10px 20px; font-family: sans-serif; font-size: 14px; display: flex; align-items: center; gap: 10px; }
     .theme-bar select { padding: 4px 8px; font-size: 14px; border-radius: 4px; }
-
     header { display: flex; justify-content: space-between; align-items: center; padding: 20px 40px; background: #fff; border-bottom: 2px solid var(--primary-color); }
-    .logo-container { background: var(--dark-bg); color: #fff; padding: 15px 25px; font-weight: bold; text-transform: uppercase; font-size: 20px; letter-spacing: 2px; text-align: center; border-left: 10px solid var(--primary-color); cursor: pointer; }
+    .logo-container { width: 140px; height: 140px; background: var(--dark-bg); color: #fff; padding: 10px; font-weight: bold; text-transform: uppercase; font-size: 12px; letter-spacing: 1px; text-align: center; border-left: 10px solid var(--primary-color); cursor: pointer; display: flex; align-items: center; justify-content: center; overflow: hidden; flex-shrink: 0; }
+    .logo-container img { max-width: 100%; max-height: 100%; object-fit: contain; margin: auto; display: block; }
     nav ul { display: flex; list-style: none; gap: 20px; }
     nav a { text-decoration: none; color: #333; font-weight: bold; text-transform: uppercase; padding: 5px 10px; }
     nav a:hover, nav a.active { background-color: var(--primary-color); color: var(--primary-text); }
-
     .container { width: 90%; max-width: 1200px; margin: 20px auto; flex: 1; }
     .banner { background: var(--primary-color); color: var(--primary-text); padding: 15px 25px; font-size: 24px; font-weight: bold; text-transform: uppercase; width: fit-content; margin-bottom: 30px; box-shadow: 4px 4px 0px #000; }
-
     .contact-grid { display: grid; grid-template-columns: 1fr 2fr; gap: 40px; }
     .info-box { background: var(--light-bg); padding: 20px; border-left: 4px solid var(--primary-color); }
     .info-title { background: #000; color: #fff; padding: 5px 10px; font-weight: bold; margin-bottom: 10px; display: inline-block; }
@@ -36,7 +34,6 @@
     .form-group label { margin-bottom: 5px; font-weight: bold; font-size: 14px; }
     .form-group input, .form-group textarea { padding: 10px; border: 1px solid #ccc; font-family: sans-serif; }
     .btn-submit { background: var(--primary-color); color: var(--primary-text); border: none; padding: 12px 25px; font-weight: bold; cursor: pointer; text-transform: uppercase; width: 100%; grid-column: span 2; margin-top: 10px; }
-
     footer { background: var(--dark-bg); color: #fff; padding: 40px; margin-top: 50px; font-family: sans-serif; }
     .footer-content { display: flex; justify-content: space-between; flex-wrap: wrap; gap: 20px; max-width: 1200px; margin: 0 auto; }
     .footer-nav a { color: #fff; text-decoration: none; margin-right: 15px; text-transform: uppercase; font-size: 14px; }
@@ -44,7 +41,6 @@
   </style>
 </head>
 <body>
-
   <div class="theme-bar">
     <label for="themeSelect"><strong>Step 2: Choose Color Theme:</strong></label>
     <select id="themeSelect" onchange="changeTheme(this.value)">
@@ -58,7 +54,6 @@
       <option value="#20c997">Teal</option>
     </select>
   </div>
-
   <header>
     <div class="logo-container">Click here to upload your own company logo</div>
     <nav>
@@ -70,10 +65,8 @@
       </ul>
     </nav>
   </header>
-
   <div class="container">
     <div class="banner">GET IN TOUCH WITH US 123</div>
-
     <div class="contact-grid">
       <div class="info-box">
         <div class="info-title">Reach us at:</div>
@@ -85,7 +78,6 @@
         <br>
         <p><strong>Regional Office:</strong><br>456 Kindness Ave, City, 00100</p>
       </div>
-
       <form class="form-grid" onsubmit="event.preventDefault();">
         <div class="form-group">
           <label>First Name *</label>
@@ -111,7 +103,6 @@
       </form>
     </div>
   </div>
-
   <footer>
     <div class="footer-content">
       <div>
@@ -129,7 +120,6 @@
       </div>
     </div>
   </footer>
-
   <script>
     function changeTheme(color) {
       document.documentElement.style.setProperty('--primary-color', color);
